@@ -1,0 +1,19 @@
+LinearLayout translateBar = new LinearLayout(this);
+translateBar.setOrientation(LinearLayout.HORIZONTAL);
+
+Button languageButton = new Button(this);
+languageButton.setText("EN → ES");
+translateBar.addView(languageButton);
+
+Button translateButton = new Button(this);
+translateButton.setText("Translate");
+translateButton.setOnClickListener(v -> {
+    android.widget.Toast.makeText(
+        this,
+        "Translation coming soon!",
+        android.widget.Toast.LENGTH_SHORT
+    ).show();
+});
+translateBar.addView(translateButton);
+
+keyboard.addView(translateBar);
